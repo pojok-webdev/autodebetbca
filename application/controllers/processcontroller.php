@@ -56,7 +56,15 @@ class Processcontroller extends CI_Controller{
         if(isset($_POST['show'])){
             $out = $this->getheader($record_id,'<br />');
             $out.= $this->getbody($record_id,'<br />');
-            echo $out;
+            //echo $out;
+            $data = array(
+                'info1'=>$out,
+                'info2'=>'',
+                'redirect'=>'/',
+                'feedData'=>'output',
+                'role'=>'user'
+            );
+            $this->load->view('output',$data);
         }
         if(isset($_POST["submit"]))
         {
