@@ -51,9 +51,6 @@ class Processcontroller extends CI_Controller{
     function importexisting(){
         session_start();
         $params = $this->input->post();
-        foreach($params as $key=>$val){
-            echo $key . ' and ' . $val . '<br />';
-        }
         $record_id = $params["record_id"];
         $record = $this->getrecord($record_id);
         if(isset($_POST['show'])){
