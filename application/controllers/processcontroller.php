@@ -51,6 +51,9 @@ class Processcontroller extends CI_Controller{
     function importexisting(){
         session_start();
         $params = $this->input->post();
+        foreach($params as $key=>$val){
+            echo $key . ' and ' . $val . '<br />';
+        }
         $record_id = $params["record_id"];
         $record = $this->getrecord($record_id);
         if(isset($_POST['show'])){
@@ -113,14 +116,9 @@ class Processcontroller extends CI_Controller{
             }else{
                 echo "anda harus memilih file terlebih dahulu ";
             }
-<<<<<<< HEAD
         }
         if(isset($_POST['download'])){
             $out = $this->getheader($record_id);
-=======
-        }else{
-            $out = $this->getheader($record_id)."\r\n";
->>>>>>> d7d5e6a84cab79f7ce0e2b23d1f20546a20aaa6e
             $out.= $this->getbody($record_id);
             $file = "output/output.txt";
             file_put_contents($file,$out);
