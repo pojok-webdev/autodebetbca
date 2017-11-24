@@ -129,7 +129,6 @@ class Processcontroller extends CI_Controller{
             file_put_contents($file,$out);
 
             $filename = 'output/ADBOFFL.txt';
-            //$filename = 'ADBOFFL.txt'; // of course find the exact filename....        
             header('Pragma: public');
             header('Expires: 0');
             header('Cache-Control: must-revalidate, post-check=0, pre-check=0');

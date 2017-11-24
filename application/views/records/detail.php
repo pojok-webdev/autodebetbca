@@ -31,10 +31,10 @@
                                             <i class="glyphicon glyphicon-import"></i> Import
                                         </button>
                                         <button class="btn btn-sm btn-default" id="download" name="download">
-                                            <i class="glyphicon glyphicon-import"></i> Download
+                                            <i class="glyphicon glyphicon-download"></i> Download ADBOFFL
                                         </button>
                                         <button class="btn btn-sm btn-default" id="download" name="show">
-                                                <i class="glyphicon glyphicon-import"></i> Tampilkan
+                                                <i class="glyphicon glyphicon-eye-open"></i> Tampilkan Di Layar
                                         </button>
                                     </form>
                                 </div>
