@@ -128,7 +128,7 @@ class Processcontroller extends CI_Controller{
             $file = "output/ADBOFFL.txt";
             file_put_contents($file,$out);
 
-            $filename = 'output/output.txt';
+            $filename = 'output/ADBOFFL.txt';
             //$filename = 'ADBOFFL.txt'; // of course find the exact filename....        
             header('Pragma: public');
             header('Expires: 0');
