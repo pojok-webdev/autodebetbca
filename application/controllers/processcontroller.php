@@ -125,7 +125,7 @@ class Processcontroller extends CI_Controller{
         if(isset($_POST['download'])){
             $out = $this->getheader($record_id);
             $out.= $this->getbody($record_id);
-            $file = "output/output.txt";
+            $file = "output/ADBOFFL.txt";
             file_put_contents($file,$out);
 
             $filename = 'output/output.txt';
