@@ -127,7 +127,24 @@ class Processcontroller extends CI_Controller{
             $out.= $this->getbody($record_id);
             $file = "output/output.txt";
             file_put_contents($file,$out);
-            redirect("../../../records/detail/".$record_id);
+
+            $filename = 'output/output.txt';
+            //$filename = 'ADBOFFL.txt'; // of course find the exact filename....        
+            header('Pragma: public');
+            header('Expires: 0');
+            header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+            header('Cache-Control: private', false); // required for certain browsers 
+            header('Content-Type: application/text');
+            
+            header('Content-Disposition: attachment; filename="'. basename($filename) . '";');
+            header('Content-Transfer-Encoding: binary');
+            header('Content-Length: ' . filesize($filename));
+            
+            readfile($filename);
+            
+            exit;
+
+            //redirect("../../../records/detail/".$record_id);
         }
     }
     function getbody($record_id,$newline = PHP_EOL){
