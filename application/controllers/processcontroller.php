@@ -292,7 +292,7 @@ class Processcontroller extends CI_Controller{
         $out.= addspaces($res->kodeperusahaan,0,8);
         $out.= $res->matauang;
         $out.= add_trailing_zeros($res->totaldata,7);
-        $out.= add_trailing_zeros($nominal["intpart"],15).add_end_zeros($nominal["fracpart"],17);
+        $out.= add_trailing_zeros($nominal["intpart"],15).add_end_zeros($nominal["fracpart"],2);
         $out.= $res->tanggalefektifad;
         return $out.$newline;
     }
