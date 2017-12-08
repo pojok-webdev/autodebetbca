@@ -19,7 +19,7 @@ class Records extends CI_Controller{
             "records"=>$this->Record->getrecords(),
             "role"=>$this->User->getrole()
         );
-        $this->load->view("records/add",$data);        
+        $this->load->view("records/add",$data);
     }
     function detail(){
         session_start();
@@ -78,7 +78,7 @@ class Records extends CI_Controller{
             redirect("/records");
         }
         $this->Record->save($params);
-        redirect("../index");
+        redirect("/records/index");
     }
     function update(){
         session_start();
